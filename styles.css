@@ -1,0 +1,65 @@
+
+.main_line {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 29px;
+}
+
+h4 {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+h4 p {
+    margin-left: 40px;
+}
+
+.parts {
+    list-style-type: none;
+    font-size: 30px;
+    counter-reset: part;
+}
+
+.chapters {
+    list-style-type: none;
+    font-size: 25px;
+    counter-reset: chapter;
+}
+
+.parts li::before {
+    counter-increment: part;
+    content: "Part " counter(part) ". ";
+}
+
+.chapters li::before {
+    counter-increment: chapter;
+    content: counter(part) "." counter(chapter) " ";
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 30px;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color:darkgrey;
+}
+
+th {
+    font-weight: bold;
+    text-align: left ;
+    border: 1px solid red;
+}
+
+td {
+    text-align: left;
+    border: 1px solid black;
+}
